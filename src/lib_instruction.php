@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"> 
+    <title>实验室招聘</title>
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/js/UI.js"></script>
+  </head>
+
+  <body>
+    
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">招聘</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">主页</a></li>
+            <li><a href="#about">校招行程</a></li>
+            <li><a href="#contact">实习介绍</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="查询">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+
+			<div style="float: right;">
+				<button type="button" class="btn btn-success" onclick="login()" style="padding: 6px 20px;margin: 7px 5px;">登录</button>
+				<button type="button" class="btn btn-warning" onclick="sign_up()" style="padding: 6px 20px;margin: 7px 5px;">注册</button>
+			</div>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+	<p>&nbsp;</p>
+	
+    <div class="container" id="main">
+      <div class="jumbotron">
+
+        <div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">实验室环境</h3>
+		  </div>
+		  <div class="panel-body">
+			<img src="static/image/BGP.jpg" style="width:100%;height:100%;">
+			<center>
+			<nav aria-label="Page navigation">
+			  <ul class="pagination">
+				<li>
+				  <a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				  </a>
+				</li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li>
+				  <a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+			</center>
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">实验室介绍</h3>
+		  </div>
+		  <div class="panel-body">
+			<p>哈尔滨工业大学（Harbin Institute of Technology）简称哈工大（HIT），由中华人民共和国工业和信息化部直属、中央直管副部级建制，位列国家首批“985工程、211工程、世界一流大学建设高校A类”，入选2011计划、珠峰计划、111计划、卓越工程师教育培养计划、国家级新工科研究与实践项目、国家级大学生创新创业训练计划、国家大学生创新性实验计划、国家建设高水平大学公派研究生项目、中国政府奖学金来华留学生接收院校、全国深化创新创业教育改革示范高校，是九校联盟（C9）、中国大学校长联谊会、卓越大学联盟、中俄工科大学联盟、中国-西班牙大学联盟主要成员，设有研究生院和国家大学科技园，拥有研究生自主划线资格，是一所以理工为主、多学科协调发展的国家重点大学。 [1-2] </p>
+			<p>学校始建于1920年，1951年被确定为全国学习国外高等教育办学模式的两所样板大学之一，1954年进入国家首批重点建设的6所高校行列（京外唯一一所），是新中国第一所毕业生直接被授予工程师称号、研究生三年制的理工科大学。1996年进入国家“211工程”首批重点建设高校。1999年被确定为国家首批按照世界知名高水平大学目标重点建设的9所"985工程"大学之一。2000年与同根同源的哈尔滨建筑大学合并组建新的哈尔滨工业大学。2017年入选“双一流”建设A类高校名单。 [3] </p>
+			<p>据2018年9月学校官网显示，哈工大拥有哈尔滨、威海、深圳三个校区；本部校园面积5212.35亩，建筑面积202.69万平方米；有专任教师3045人，在校学生人数46138人。</p>
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">实验室岗位一览</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="container" id="select_info">
+			  <table class="table table-striped">
+				 <thead>
+					<tr>
+					   <th>职位名称</th>
+					   <th>职能</th>
+					   <th>工作城市</th>
+					   <th>面试城市</th>
+					</tr>
+				 </thead>
+				 <tbody>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+					<tr>
+					   <td>后台开发工程师</td>
+					   <td>技术类</td>
+					   <td>北京市、上海市、深圳市</td>
+					   <td>北京市、上海市、深圳市</td>
+					</tr>
+				 </tbody>
+			  </table>
+			</div>
+
+			<center>
+			<nav aria-label="Page navigation">
+			  <ul class="pagination">
+				<li>
+				  <a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				  </a>
+				</li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li>
+				  <a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+			</center>
+		  </div>
+		</div>
+		
+		
+      </div>
+    </div>
+
+
+
+
+    
+  </body>
+
+</html>
+<script type="text/javascript">
+	//登陆
+	function login(){
+		//UI.alert({title:'系统消息',msg:'请输入用户名',icon:'error'});
+		UI.open({title:'登录',url:'log_in.php',width:450,height:350});
+	}
+	
+	function sign_up(){
+		window.location.href='sign_up.php';
+	}
+	//退出
+	
+</script>
