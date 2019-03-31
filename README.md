@@ -1,5 +1,5 @@
 # Front End
 
 # Teammates
-* blacktion
-* rainphix
+* [blacktion](https://github.com/blacktion)
+* [rainphix](https://github.com/Rainphix)
