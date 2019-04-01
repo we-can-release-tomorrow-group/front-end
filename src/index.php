@@ -52,19 +52,14 @@
 	
 	<div class="jumbotron" style="margin: 150px 50px;background-color:rgba(0,0,0,0.5); ">
 		<div class="container">
-			<center style="color:white;">
+			<div style="color:white;text-align: center">
 				<h1 style="font-size:50px;">哈尔滨工业大学（威海）实验室服务平台</h1>
-			</center>
-			<center style="margin-top:50px;">
+			</div>
+			<div style="margin-top:50px;text-align: center">
 				<p ><a class="btn btn-primary btn-lg" href="#" role="button" style="background-color:rgba(0,0,0,0.3);color:white">点击申请职位</a></p>
-			</center>
+			</div>
 		</div>
 	</div>
-    
-
-
-
-	
   </body>
 
 </html>
