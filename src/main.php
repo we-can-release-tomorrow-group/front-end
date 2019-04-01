@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    
-    <nav class="navbar navbar-fixed-top navbar-inverse">
+  <?php
+  echo '<nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
 
         <div class="navbar-header">
@@ -185,8 +185,8 @@
             </li>
           </ul>
         </nav>
-    </div>
-
+    </div>'
+  ?>
 
     <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
     <!-- 可选: 包含 jQuery 库 -->
