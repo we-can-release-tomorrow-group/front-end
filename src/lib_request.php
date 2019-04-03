@@ -15,11 +15,29 @@
 <body background="/static/image/BGP.jpg" style="min-width:800px;max-width:1500px;background-size:cover;">
 <?php
 include 'top.php';
+$name = $number = $ins = $skills = $text = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    if (empty($_POST["lab_name"]))
+    {
+        $name = test_input($_POST["lab_name"]);
+        $number = test_input($_POST["lab_number"]);
+        $ins = test_input($_POST["lab_ins"]);
+        $skills = test_input($_POST["lab_skills"]);
+        $text = test_input($_POST["lab_text"]);
+    }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+echo $name,$number;
 echo '
-    $name = $number = $ins = $skills = $text = "";
-    
-    
-    
+   
     <div class="container" id="lab_add">
       <div class="jumbotron">
         <div class="panel panel-default">

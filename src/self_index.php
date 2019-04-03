@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>实验室招聘</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/site.css"/>
+		<script type="text/javascript" src="static/js/jquery.min.js"></script>
+		<script type="text/javascript" src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="static/js/UI.js"></script>
+		<style type="text/css">
+			.content-list .title{text-align: center;font-size: 28px;margin: 20px 0px;color: #666;}
+			.content-list .wel_img{text-align: center;}
+		</style>
+	</head> 
+
+	<body>
+    
+		<?php include 'top.php';?>
+
+		<div class="main container">
+			
+			<!--左边小主题-->
+			<?php include 'left.php';?>
+			<!--左边小主题-->
+			
+			<!--右边正文-->
+			<div class="col-lg-9 col-xs-9" style="margin:35px 0px;" >
+				<div class="nav">
+					<a href="" class="active">信息</a>
+				</div>
+				<div class="content-list">
+				<div class="title">W&nbsp;e&nbsp;l&nbsp;c&nbsp;o&nbsp;m&nbsp;e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;a&nbsp;c&nbsp;k&nbsp;!</div>
+					<body class="wel_img"><img src="static/image/welcome_back.jpg" width="70%" height="150%" style="z-index:100;margin-top: 20px;margin:5% 15%;"></body>
+				</div>
+				
+			</div>
+			<!--右边正文-->
+			
+		</div>
+    
+		<?php include 'footer.php';?>
+		
+	</body>
+
+</html>
+<script type="text/javascript">
+	//登陆
+	function login(){
+		//UI.alert({title:'系统消息',msg:'请输入用户名',icon:'error'});
+		UI.open({title:'登录',url:'log_in.php',width:450,height:350});
+	}
+	
+	function sign_up(){
+		UI.open({title:'注册',url:'sign_up.php',width:450,height:350});
+	}
+	//退出
+	
+</script>

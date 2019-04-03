@@ -23,7 +23,7 @@
 				</div>
 				<div class="input-group input-group-sm">
 					 <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;&nbsp;码</span>
-					 <input type="password" class="form-control" name="pwd" placeholder="请输入密码">
+					 <input type="password" class="form-control" name="password" placeholder="请输入密码">
 				</div>	
 			</div>
 			<div class="anniu">
@@ -35,12 +35,12 @@
 	//登录
 	function login(){
 		var username=$.trim($('input[name="username"]').val());
-		var pwd=$.trim($('input[name="pwd"]').val());
+		var password=$.trim($('input[name="password"]').val());
 		if(username==''){
 			UI.alert({msg:'用户名不能为空',icon:'error'});
 			return;
 		}
-		if(pwd==''){
+		if(password==''){
 			UI.alert({msg:'密码不能为空',icon:'error'});
 			return;
 		}
