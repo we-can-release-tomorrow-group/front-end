@@ -16,17 +16,18 @@
 <?php
 include 'top.php';
 $name = $number = $ins = $skills = $text = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    if (empty($_POST["lab_name"]))
-    {
+$url = 100;
+//if ($_SERVER["REQUEST_METHOD"] == "post")
+//{
+  //  if (empty($_POST["lab_name"]))
+    //{
         $name = test_input($_POST["lab_name"]);
         $number = test_input($_POST["lab_number"]);
-        $ins = test_input($_POST["lab_ins"]);
+        $ins = test_input($_POST["lab_institute"]);
         $skills = test_input($_POST["lab_skills"]);
         $text = test_input($_POST["lab_text"]);
-    }
-}
+    //}
+//}
 
 function test_input($data)
 {
@@ -35,7 +36,7 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
-echo $name,$number;
+
 echo '
    
     <div class="container" id="lab_add">
@@ -49,69 +50,82 @@ echo '
 			  <table class="table table-striped">
 				 <thead>
 					<tr>
-					   <th>职位名称</th>
-					   <th>职能</th>
-					   <th>工作城市</th>
-					   <th>面试城市</th>
+					   <th>发布职位</th>
+					   <th>学生所属院系</th>
+					   <th>技能需求</th>
+					   <th>所需人数</th>
+					   
 					</tr>
 				 </thead>
-				 <tbody>
+				 <tbody id="tbody_parent">
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>机器学习/数据挖掘算法工程师</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>2 人</td>
+					   <td>
+					        <button style="border-radius: 30%" class="btn">-</button>
+                       </td>
 					</tr>
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>财务培训生</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>3 人</td>
+					   <td>
+					        <button style="border-radius: 30%" class="btn">-</button>
+                       </td>
 					</tr>
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>平台型产品经理(技术领域)</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>1 人</td>
+					   <td>
+					        <button style="border-radius: 30%" class="btn">-</button>
+                       </td>
 					</tr>
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>体验设计师</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>2 人</td>
+					   <td>
+					        <button style="border-radius: 30%" class="btn">-</button>
+                       </td>
 					</tr>
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>算法工程师-语音对话交互</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>3 人</td>
+					   <td>
+					        <button style="border-radius: 30%" class="btn">-</button>
+                       </td>
 					</tr>
 					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
+					   <td>算法工程师-自然语言处理</td>
+					   <td>计算机科学与技术学院</td>
+					   <td>Python/Java/C++</td>
+					   <td>1 人</td>
+					   <td>
+					        <button style="border-radius: 30%" >-</button>
+                       </td>
 					</tr>
-					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
-					</tr>
-					<tr>
-					   <td>后台开发工程师</td>
-					   <td>技术类</td>
-					   <td>北京市、上海市、深圳市</td>
-					   <td>北京市、上海市、深圳市</td>
-					</tr>
+					
 				 </tbody>
 			  </table>
           
             <div style="text-align: center;" id="lab_add">
                 <button type="button" class="btn btn-primary" onclick="add_position()">添加新的职位需求</button>
-            </div> 
+            </div>
+            <br>
+            <br>
+            <div style="text-align: center;" id="lab_alert">
+                <button type="button" class="btn btn-primary" onclick="add_element()">test</button>
+            </div>  
         </div>
-'
+';
 ?>
 
 </body>
@@ -125,12 +139,44 @@ echo '
     }
 
     function sign_up(){
-        window.location.href='sign_up.php';
+        window.location.href = 'sign_up.php';
     }
     //退出
     
     function add_position() {
-        UI.open({title:'发布',url:'lib_add.php',width:850,height:600});
+        //UI.open({title:'发布',url:'lib_add.php',width:850,height:600});
+        window.location.href = 'lib_add.php';
+    }
+
+    function add_element() {
+        var js_name = "<?php echo $name?>";
+        var js_number = "<?php echo $number?>";
+        var js_ins = "<?php echo $ins?>";
+        var js_skills = "<?php echo $skills?>";
+        var js_text = "<?php echo $text?>";
+
+        var tr_add = document.createElement('tr');
+
+        var tr_name = document.createElement('td');
+        tr_name.innerHTML = js_name;
+        var tr_ins = document.createElement('td');
+        tr_ins.innerHTML = js_ins;
+        var tr_skills = document.createElement('td');
+        tr_skills.innerHTML = js_skills;
+        var tr_number = document.createElement('td');
+        tr_number.innerHTML = js_number;
+
+        var tbody_parent = document.getElementById('tbody_parent');
+        tbody_parent.appendChild(tr_add);
+        tr_add.appendChild(tr_name);
+        tr_add.appendChild(tr_ins);
+        tr_add.appendChild(tr_skills);
+        tr_add.appendChild(tr_number);
+
+        window.alert(js_name+js_number+js_ins+js_skills+js_text);
+    }
+    function delete_element(){
+
     }
 
 </script>
