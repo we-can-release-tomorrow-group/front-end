@@ -19,9 +19,9 @@ echo '
 <form class="form-horizontal" action="lib_request.php" method="post">
 
       <div class="form-group">
-            <label for="lab_name" class="col-sm-2 control-label">实验室名称</label>
+            <label for="lab_name" class="col-sm-2 control-label">职位名称</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="lab_name" placeholder="请输入实验室名称">
+            <input type="text" class="form-control" name="lab_name" placeholder="请输入职位名称">
           </div>
       </div>
       <br>
@@ -65,7 +65,7 @@ echo '
       <div class="form-group">
             <label for="lab_text" class="col-sm-2 control-label">学生所属院系</label>
             <div class="col-sm-offset-2 col-sm-10">
-                <textarea class="form-control" rows="3" id="lab_text" placeholder="请输入具体要求"></textarea>
+                <textarea class="form-control" rows="3" name="lab_text" placeholder="请输入具体要求"></textarea>
             </div>
       </div>
       <div class="form-group">
