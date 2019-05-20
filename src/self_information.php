@@ -16,13 +16,21 @@
 	</head> 
 
 	<body>
-    
-		<?php include 'top.php';?>
+
+
+    謬論 2019/5/20 21:49:13
+    <div id="top"></div>
+    <script>
+        $("#top").load("top.php");
+    </script>
 
 		<div class="main container">
 			
 			<!--左边小主题-->
-			<?php include 'left.php'?>
+            <div id="left"></div>
+            <script>
+                $("#left").load("left.php");
+            </script>
 			<!--左边小主题-->
 			
 			<!--右边正文-->
@@ -146,10 +154,14 @@
 			<!--右边正文-->
 			
 		</div>
-    
-		<?php include 'footer.php';?>
-		
-	</body>
+
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("footer.php");
+    </script>
+
+
+    </body>
 
 </html>
 <script type="text/javascript">
