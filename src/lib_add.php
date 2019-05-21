@@ -13,9 +13,7 @@
 </head>
 
 <body>
-<?php
-//include 'top.php';
-echo '
+
 <form class="form-horizontal" action="lib_request.php" method="post">
 
       <div class="form-group">
@@ -74,9 +72,7 @@ echo '
             </div>
       </div>
 </form>
-  
-'
-?>
+
 
 </body>
 

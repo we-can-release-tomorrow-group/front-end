@@ -13,9 +13,10 @@
   </head>
 
   <body>
-  <?php
-  include 'top.php';
-  echo '
+  <div id="top"></div>
+  <script>
+      $("#top").load("top.php");
+  </script>
 
     <div class="container" id="info">
         <div class="jumbotron">
@@ -173,9 +174,11 @@
           </ul>
         </nav>
       </div>
-    </div>';
-  ?>
-  <?php include 'footer.php'?>
+    </div>
+  <div id="footer"></div>
+  <script>
+      $("#footer").load("footer.php");
+  </script>
   </body>
 
 </html>

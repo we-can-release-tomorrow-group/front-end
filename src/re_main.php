@@ -13,8 +13,7 @@
   </head>
 
   <body>
-  <?php
-  echo '<nav class="navbar navbar-fixed-top navbar-inverse">
+    <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
 
         <div class="navbar-header">
@@ -226,8 +225,7 @@
           </ul>
         </nav>
       </div>
-    </div>'
-  ?>
+    </div>
     
   </body>
 

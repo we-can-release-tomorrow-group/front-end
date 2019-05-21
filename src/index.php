@@ -13,8 +13,11 @@
 	</head>
 
   <body background="/static/image/BGP.jpg" style="min-width:800px;max-width:1500px;background-size:cover;">
-    
-    <?php include 'top.php';?>
+
+    <div id="top"></div>
+    <script>
+        $("#top").load("top.php");
+    </script>
 
 	<div class="jumbotron" style="margin: 150px 50px;background-color:rgba(0,0,0,0.5); ">
 		<div class="container">
@@ -26,9 +29,11 @@
 			</div>
 		</div>
 	</div>
-	
-	<?php include 'footer.php';?>
-	
+
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("footer.php");
+    </script>
   </body>
 
 </html>
