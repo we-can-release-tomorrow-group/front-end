@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>实验室招聘 实例</title>
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/UI.js"></script>
+</head>
+
+<body background="/static/image/BGP.jpg" style="min-width:800px;max-width:1500px;background-size:cover;">
+
+    <div id="top"></div>
+    <script>
+        $("#top").load("top.html");
+    </script>
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("footer.html");
+    </script>
+    <div class="container" id="lab_add">
+        <div class="jumbotron">
+            <div class="panel panel-default">
+		        <div class="panel-heading">
+			        <h2 class="panel-title" style="">实验室已发布职位</h2>
+		        </div>
+		    <div class="panel-body">
+			    <div class="container" id="select_info">
+			        <table class="table table-striped">
+				    <thead>
+                        <tr>
+                            <th>发布职位</th>
+                            <th>学生所属院系</th>
+                            <th>技能需求</th>
+                            <th>所需人数</th>
+                        </tr>
+				     </thead>
+				    <tbody id="tbody_parent">
+					<tr>
+					     <td>机器学习/数据挖掘算法工程师</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>2 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+					<tr>
+					     <td>财务培训生</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>3 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+					<tr>
+					     <td>平台型产品经理(技术领域)</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>1 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+					<tr>
+					     <td>体验设计师</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>2 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+					<tr>
+					     <td>算法工程师-语音对话交互</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>3 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+					<tr>
+					     <td>算法工程师-自然语言处理</td>
+					     <td>计算机科学与技术学院</td>
+					     <td>Python/Java/C++</td>
+					     <td>1 人</td>
+					     <td>
+					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                         </td>
+					</tr>
+                    </tbody>
+			  </table>
+          
+            <div style="text-align: center;" id="lab_add">
+                <button type="button" class="btn btn-primary" onclick="add_position();">添加新的职位需求</button>
+            </div>
+            <br>
+            <br>
+            <div style="text-align: center;" id="lab_alert">
+                <button type="button" class="btn btn-primary" onclick="add_element();">test</button>
+            </div>  
+        </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    //登陆
+    var login = function(){
+        //UI.alert({title:'系统消息',msg:'请输入用户名',icon:'error'});
+        UI.open({title:'登录',url:'log_in.php',width:450,height:350});
+    }
+
+    var sign_up = function(){
+        window.location.href = 'sign_up.php';
+    }
+    //退出
+    
+    var add_position = function() {
+        //UI.open({title:'发布',url:'lib_add.php',width:850,height:600});
+        window.location.href = 'lib_add.html';
+    }
+
+    var add_element = function () {
+        $("tbody").append("<tr>\n" +
+            "\t\t\t\t\t     <td>算法工程师-自然语言处理</td>\n" +
+            "\t\t\t\t\t     <td>计算机科学与技术学院</td>\n" +
+            "\t\t\t\t\t     <td>Python/Java/C++</td>\n" +
+            "\t\t\t\t\t     <td>1 人</td>\n" +
+            "\t\t\t\t\t     <td>\n" +
+            "\t\t\t\t\t          <button style=\"border-radius: 30%\" class=\"btn\" id=\"delete_btn\" onclick=\"de_element(this);\">-</button>\n" +
+            "                         </td>\n" +
+            "\t\t\t\t\t</tr>");
+    }
+
+    var de_element = function(obj) {
+        var pp_node = obj.parentNode.parentNode;
+        var ppp_node = pp_node.parentNode;
+        ppp_node.removeChild(pp_node);
+    }
+
+
+</script>
