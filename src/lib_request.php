@@ -144,7 +144,7 @@ echo '
     
     var add_position = function() {
         //UI.open({title:'发布',url:'lib_add.php',width:850,height:600});
-        window.location.href = 'lib_add.php';
+        window.location.href = 'lib_add.html';
     }
 
     var add_element = function() {

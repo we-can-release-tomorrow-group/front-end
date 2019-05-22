@@ -192,7 +192,10 @@
     </div>
 
 
-
+	<div id="footer"></div>
+	<script>
+		$("#footer").load("footer.html");
+	</script>
 
     
   </body>
@@ -202,11 +205,11 @@
 	//登陆
 	function login(){
 		//UI.alert({title:'系统消息',msg:'请输入用户名',icon:'error'});
-		UI.open({title:'登录',url:'log_in.php',width:450,height:350});
+		UI.open({title:'登录',url:'log_in.html',width:450,height:350});
 	}
 	
 	function sign_up(){
-		window.location.href='sign_up.php';
+		UI.open({title:'注册',url:'sign_up.html',width:450,height:350});
 	}
 	//退出
 	
