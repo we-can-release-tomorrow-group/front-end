@@ -28,75 +28,76 @@
 		        <div class="panel-heading">
 			        <h2 class="panel-title" style="">实验室已发布职位</h2>
 		        </div>
-		    <div class="panel-body">
-			    <div class="container" id="select_info">
-			        <table class="table table-striped">
-				    <thead>
+
+                <div class="panel-body">
+                    <div class="container" id="select_info">
+                        <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>发布职位</th>
+                                <th>学生所属院系</th>
+                                <th>技能需求</th>
+                                <th>所需人数</th>
+                            </tr>
+                         </thead>
+                        <tbody id="tbody_parent">
                         <tr>
-                            <th>发布职位</th>
-                            <th>学生所属院系</th>
-                            <th>技能需求</th>
-                            <th>所需人数</th>
+                             <td>机器学习/数据挖掘算法工程师</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>2 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
                         </tr>
-				     </thead>
-				    <tbody id="tbody_parent">
-					<tr>
-					     <td>机器学习/数据挖掘算法工程师</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>2 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-					<tr>
-					     <td>财务培训生</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>3 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-					<tr>
-					     <td>平台型产品经理(技术领域)</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>1 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-					<tr>
-					     <td>体验设计师</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>2 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-					<tr>
-					     <td>算法工程师-语音对话交互</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>3 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-					<tr>
-					     <td>算法工程师-自然语言处理</td>
-					     <td>计算机科学与技术学院</td>
-					     <td>Python/Java/C++</td>
-					     <td>1 人</td>
-					     <td>
-					          <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
-                         </td>
-					</tr>
-                    </tbody>
-			  </table>
-          
+                        <tr>
+                             <td>财务培训生</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>3 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
+                        </tr>
+                        <tr>
+                             <td>平台型产品经理(技术领域)</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>1 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
+                        </tr>
+                        <tr>
+                             <td>体验设计师</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>2 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
+                        </tr>
+                        <tr>
+                             <td>算法工程师-语音对话交互</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>3 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
+                        </tr>
+                        <tr>
+                             <td>算法工程师-自然语言处理</td>
+                             <td>计算机科学与技术学院</td>
+                             <td>Python/Java/C++</td>
+                             <td>1 人</td>
+                             <td>
+                                  <button style="border-radius: 30%" class="btn" id="delete_btn" onclick="de_element(this);">-</button>
+                             </td>
+                        </tr>
+                        </tbody>
+                  </table>
+                    </div>
             <div style="text-align: center;" id="lab_add">
                 <button type="button" class="btn btn-primary" onclick="add_position();">添加新的职位需求</button>
             </div>
@@ -106,7 +107,9 @@
                 <button type="button" class="btn btn-primary" onclick="add_element();">test</button>
             </div>  
         </div>
-
+	</div>
+    </div>
+    </div>
 </body>
 
 </html>
