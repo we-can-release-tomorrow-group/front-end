@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,8 +16,11 @@
 	</head> 
 
 	<body>
-    
-		<?php include 'top.php';?>
+
+    <div id="top"></div>
+    <script>
+        $("#top").load("top.php");
+    </script>
 
 		<div class="main container">
 			
@@ -40,8 +42,11 @@
 			<!--右边正文-->
 			
 		</div>
-    
-		<?php include 'footer.php';?>
+
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("footer.php");
+    </script>
 		
 	</body>
 
