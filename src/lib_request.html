@@ -7,22 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 包含 bootstrap 样式表 -->
     <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap-table/css/bootstrap-table.css"/>
     <script type="text/javascript" src="static/js/jquery.min.js"></script>
     <script type="text/javascript" src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/js/UI.js"></script>
+    <script type="text/javascript" src="static/plugins/bootstrap-table/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="static/plugins/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
 </head>
 
-<body background="/static/image/BGP.jpg" style="min-width:800px;max-width:1500px;background-size:cover;">
+<body>
 
     <div id="top"></div>
     <script>
         $("#top").load("top.html");
     </script>
+
+    <div id="lib_left"></div>
+    <script>
+        $("#lib_left").load("lib_left.html");
+    </script>
+
     <div id="footer"></div>
     <script>
         $("#footer").load("footer.html");
     </script>
-    <div class="container" id="lab_add">
+
+    <div class="col-lg-10 col-xs-10">
         <div class="jumbotron">
             <div class="panel panel-default">
 		        <div class="panel-heading">
@@ -31,6 +41,16 @@
 
                 <div class="panel-body">
                     <div class="container" id="select_info">
+
+                        <div id="toolbar" class="btn-group" style="margin-bottom:2%">
+                            <button id="btn_add" type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+                            </button>
+                            <button id="btn_edit" type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+                            </button>
+                        </div>
+
                         <table class="table table-striped">
                         <thead>
                             <tr>
@@ -117,11 +137,12 @@
     //登陆
     var login = function(){
         //UI.alert({title:'系统消息',msg:'请输入用户名',icon:'error'});
-        UI.open({title:'登录',url:'log_in.php',width:450,height:350});
+        UI.open({title:'登录',url:'log_in.html',width:450,height:350});
     }
 
     var sign_up = function(){
-        window.location.href = 'sign_up.php';
+        UI.open({title:'注册',url:'sign_up.html',width:450,height:350});
+        // window.location.href = 'sign_up.html';
     }
     //退出
     
